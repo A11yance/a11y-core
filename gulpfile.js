@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var jscs = require('gulp-jscs');
+var jshint = require('gulp-jshint');
 //var jsdoc = require('gulp-jsdoc');
 
 var paths = {
@@ -16,9 +17,8 @@ gulp.task('default', function () {
     .src(paths.scripts)
     .pipe(jscs({
       configPath: '.jscsrc',
-      esnext: true,
-      fix: true
+      esnext: true
     }))
-    .pipe(gulp.dest('src'));
+    .pipe(jshint());
 });
 
