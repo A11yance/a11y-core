@@ -1,32 +1,34 @@
 {
-    "name": "a11y-core",
-    "description": "",
-    "version": "0.0.1",
-    "author": "Jesse Beach <jesse.r.beach@gmail.com>",
-    "license": "Apache License 2.0",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/jessebeach/a11y-core.git"
-    },
-    "bugs" : "http://github.com/jessebeach/a11y-core/issues",
-    "dependencies": {
-        "core-js": "^0.9.13"
-    },
-    "peerDependencies": {
-
-    },
-    "optionalDependencies": {
-
-    },
-    "devDependencies": {
-        "babel": "^5.4.7",
-        "mocha": "^2.2.1",
-        "should": "^5.0.1"
-    },
-    "scripts": {
-        "compile": "babel -e -d lib/ src/",
-        "prepublish": "npm run compile",
-        "test": "mocha --recursive --require babelhook"
-    },
-    "main": "lib/index.js"
+  "name": "a11y-core",
+  "description": "",
+  "version": "0.0.1",
+  "author": "Jesse Beach <jesse.r.beach@gmail.com>",
+  "license": "Apache License 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jessebeach/a11y-core.git"
+  },
+  "bugs": "http://github.com/jessebeach/a11y-core/issues",
+  "dependencies": {
+    "core-js": "^0.9.13"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "babel-jscs": "^2.0.3",
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "gulp-jscs": "^2.0.0",
+    "gulp-jsdoc": "^0.1.4",
+    "jscs-jsdoc": "^1.1.0",
+    "mocha": "^2.2.1",
+    "should": "^5.0.1"
+  },
+  "scripts": {
+    "compile": "gulp; babel -e -d lib/ src/",
+    "prepublish": "npm run compile",
+    "test": "gulp; mocha --recursive --require babelhook"
+  },
+  "main": "lib/index.js"
 }
