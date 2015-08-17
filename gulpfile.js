@@ -40,5 +40,6 @@ gulp.task('jshint', function () {
     .pipe(jshint());
 });
 
-gulp.task('default', ['jshint', 'jscs', 'docs']);
+gulp.task('default', ['jshint', 'jscs']);
+gulp.task('compile', ['jshint', 'jscs', 'docs']);
 

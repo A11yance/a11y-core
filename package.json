@@ -25,7 +25,7 @@
     "should": "^5.0.1"
   },
   "scripts": {
-    "compile": "gulp; babel -e -d lib/ src/",
+    "compile": "gulp compile; babel -e -d lib/ src/",
     "prepublish": "npm run compile",
     "test": "gulp; mocha --recursive --require babelhook"
   },

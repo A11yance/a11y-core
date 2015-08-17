@@ -8,7 +8,6 @@
 *.orig
 
 work
-docs
 build
 dist
 pids
