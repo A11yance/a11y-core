@@ -16,7 +16,6 @@
   "optionalDependencies": {},
   "devDependencies": {
     "babel": "^5.4.7",
-    "babel-jscs": "^2.0.3",
     "chai": "^3.2.0",
     "gulp": "^3.9.0",
     "gulp-jscs": "^2.0.0",
