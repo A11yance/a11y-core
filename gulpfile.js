@@ -1,24 +1,44 @@
 var gulp = require('gulp');
 var jscs = require('gulp-jscs');
 var jshint = require('gulp-jshint');
-//var jsdoc = require('gulp-jsdoc');
+var jsdoc = require('gulp-jsdoc');
 
 var paths = {
-  scripts: [
+  src: [
     'src/**/*.js'
+  ],
+  lib: [
+    'lib/**/*.js'
   ],
   test: [
     'test/**/*.js'
   ]
 };
 
-gulp.task('default', function () {
+gulp.task('docs', function () {
   return gulp
-    .src(paths.scripts)
+    .src(paths.lib.concat(
+      ["README.md"]
+    ))
+    .pipe(jsdoc('./docs'));
+});
+
+gulp.task('jscs', function () {
+  return gulp
+    .src(paths.src)
     .pipe(jscs({
       configPath: '.jscsrc',
-      esnext: true
+      esnext: true,
+      fix: true
     }))
+    .pipe(gulp.dest('src'));
+});
+
+gulp.task('jshint', function () {
+  return gulp
+    .src(paths.src)
     .pipe(jshint());
 });
+
+gulp.task('default', ['jshint', 'jscs', 'docs']);
 
