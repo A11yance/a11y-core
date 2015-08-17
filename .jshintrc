@@ -1,6 +1,5 @@
 {
   "boss": true,
-  "browser": true,
   "curly": true,
   "eqeqeq": true,
   "eqnull": true,
@@ -8,11 +7,7 @@
   "forin": true,
   "loopfunc": true,
   "globals": {
-    "guessLanguage": true,
-    "process": true,
     "require": true,
-    "phantom": true,
-    "console": true,
     "module": true,
     "define": true,
     "chai": true,
@@ -29,7 +24,6 @@
   },
   "immed": true,
   "indent": 2,
-  "jquery": true,
   "latedef": true,
   "noarg": true,
   "node": true,
