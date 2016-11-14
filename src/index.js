@@ -5,6 +5,6 @@
  * @module a11yCore
  */
 
-import * as color from "./color.js";
+import * as color from "a11y-color";
 
 export { color };

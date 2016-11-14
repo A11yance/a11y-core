@@ -10,6 +10,7 @@
   },
   "bugs": "http://github.com/jessebeach/a11y-core/issues",
   "dependencies": {
+    "a11y-color": "0.0.1",
     "core-js": "^0.9.13"
   },
   "peerDependencies": {},
