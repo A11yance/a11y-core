@@ -2,6 +2,7 @@
   "name": "a11y-core",
   "description": "",
   "version": "0.0.2",
+  "readme": "README.md",
   "author": "Jesse Beach <jesse.r.beach@gmail.com>",
   "license": "Apache License 2.0",
   "repository": {
@@ -27,7 +28,7 @@
   },
   "scripts": {
     "compile": "gulp compile; babel -e -d lib/ src/; gulp docs",
-    "prepublish": "npm run compile",
+    "prepublish": "npm run compile && git commit -am \"Prepublish docs rev\"",
     "test": "gulp; mocha --recursive --require babelhook"
   },
   "main": "lib/index.js"
