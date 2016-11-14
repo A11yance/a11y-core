@@ -27,7 +27,8 @@
   },
   "scripts": {
     "compile": "gulp compile; babel -e -d lib/ src/; gulp docs",
-    "prepublish": "npm run compile && git commit -am \"Prepublish docs rev\"",
+    "prepublish": "npm run compile",
+    "postpublish": "git commit -am \"Post publish docs rev\"",
     "test": "gulp; mocha --recursive --require babelhook"
   },
   "main": "lib/index.js"
