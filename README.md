@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/A11yance/a11y-core.svg?branch=master)](https://travis-ci.org/A11yance/a11y-core)
+
 # a11y-core from the A11yance
 
 ## Project
